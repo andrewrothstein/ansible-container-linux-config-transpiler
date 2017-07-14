@@ -1,0 +1,10 @@
+---
+# defaults file for container-linux-config-transpiler
+clct_ver: v0.3.1
+clct_checksums:
+  apple-darwin: sha256:6ec11c3576155459d99262f0f29099a3787777be5efa22a9a8ef28fb21e557b5
+  pc-windows-gnu: sha256:142b00039b65b870172ddcf49a446af95e48cfd45da537c42ae323170d7653b1
+  unknown-linux-gnu: sha256:e709377c30b14aca3f48e2cb0a10ba529c74452c66ee579454129f51e4671cad
+
+clct_mirror: https://github.com/coreos/container-linux-config-transpiler/releases/download
+clct_install_dir: /usr/local/bin

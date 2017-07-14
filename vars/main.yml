@@ -1,0 +1,4 @@
+---
+# vars file for container-linux-config-transpiler
+clct_bin: ct-{{clct_ver}}-{{ansible_architecture}}-{{clct_platform}}
+clct_url: '{{clct_mirror}}/{{clct_ver}}/{{clct_bin}}'

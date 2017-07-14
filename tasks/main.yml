@@ -1,0 +1,16 @@
+---
+- name: download...
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{clct_url}}'
+    dest: '{{clct_install_dir}}/{{clct_bin}}'
+    mode: 0755
+
+- name: link...
+  become: yes
+  become_user: root
+  file:
+    src: '{{clct_install_dir}}/{{clct_bin}}'
+    dest: '{{clct_install_dir}}/ct'
+    state: link
