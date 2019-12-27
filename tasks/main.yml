@@ -1,28 +1,28 @@
 ---
 - name: resolve platform specific vars
-  include_vars: '{{item}}'
+  include_vars: '{{ item }}'
   with_first_found:
     - files:
-        - '{{ansible_distribution}}-{{ansible_distribution_release}}.yml'
-        - '{{ansible_distribution}}.yml'
-        - '{{ansible_os_family}}.yml'
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
       skip: true
       paths:
-        - '{{role_path}}/vars'
+        - '{{ role_path }}/vars'
 
 - name: download...
   become: yes
   become_user: root
   get_url:
-    url: '{{clct_url}}'
-    dest: '{{clct_install_dir}}/{{clct_bin}}'
-    checksum: '{{clct_checksum}}'
+    url: '{{ clct_url }}'
+    dest: '{{ clct_install_dir }}/{{ clct_bin }}'
+    checksum: '{{ clct_checksum }}'
     mode: 0755
 
 - name: link...
   become: yes
   become_user: root
   file:
-    src: '{{clct_install_dir}}/{{clct_bin}}'
-    dest: '{{clct_install_dir}}/ct'
+    src: '{{ clct_install_dir }}/{{ clct_bin }}'
+    dest: '{{ clct_install_dir }}/ct'
     state: link

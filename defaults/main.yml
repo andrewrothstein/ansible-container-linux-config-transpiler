@@ -1,11 +1,24 @@
 ---
 # defaults file for container-linux-config-transpiler
-clct_ver: v0.4.2
-clct_platform: unknown-linux-gnu
-clct_checksums:
-  apple-darwin: sha256:eb38e78ff40c9fc41592fb6521d8f95e0a0433d42901f51d6b6d294e487f0118
-  pc-windows-gnu.exe: sha256:e8f15f5894f3d8cb6e95becdeede6f3f8a8ea9887c3c8d4be498ccd6abe1a669
-  unknown-linux-gnu: sha256:9b6e2c1a1ea9e0f85f6b1e8711932c4761965a800f3381a75f960a493162502a
-
+clct_ver: v0.9.0
+clct_os: unknown-linux-gnu
 clct_mirror: https://github.com/coreos/container-linux-config-transpiler/releases/download
 clct_install_dir: /usr/local/bin
+
+clct_checksums:
+  v0.4.2:
+    # https://github.com/coreos/container-linux-config-transpiler/releases/download/v0.4.2/ct-v0.4.2-x86_64-unknown-linux-gnu
+    x86_64-unknown-linux-gnu: sha256:9b6e2c1a1ea9e0f85f6b1e8711932c4761965a800f3381a75f960a493162502a
+    # https://github.com/coreos/container-linux-config-transpiler/releases/download/v0.4.2/ct-v0.4.2-x86_64-apple-darwin
+    x86_64-apple-darwin: sha256:eb38e78ff40c9fc41592fb6521d8f95e0a0433d42901f51d6b6d294e487f0118
+    # https://github.com/coreos/container-linux-config-transpiler/releases/download/v0.4.2/ct-v0.4.2-x86_64-pc-windows-gnu.exe
+    x86_64-pc-windows-gnu: sha256:e8f15f5894f3d8cb6e95becdeede6f3f8a8ea9887c3c8d4be498ccd6abe1a669
+  v0.9.0:
+    # https://github.com/coreos/container-linux-config-transpiler/releases/download/v0.9.0/ct-v0.9.0-aarch64-unknown-linux-gnu
+    aarch64-unknown-linux-gnu: sha256:363b977d30abf12138564319c7a74bea5986dd9d155f2f3498af94778d9ace73
+    # https://github.com/coreos/container-linux-config-transpiler/releases/download/v0.9.0/ct-v0.9.0-x86_64-unknown-linux-gnu
+    x86_64-unknown-linux-gnu: sha256:31f4c3bd2219ba82b743bcbb4afab34a3e11e8a6512cefef407d9b6da0192adb
+    # https://github.com/coreos/container-linux-config-transpiler/releases/download/v0.9.0/ct-v0.9.0-x86_64-apple-darwin
+    x86_64-apple-darwin: sha256:d3b1ee87540c4b03795ea82e6990b68bc4b272ca68bd617e42af322036c9e660
+    # https://github.com/coreos/container-linux-config-transpiler/releases/download/v0.9.0/ct-v0.9.0-x86_64-pc-windows-gnu.exe
+    x86_64-pc-windows-gnu: sha256:3ad2593e0e6af814600cd7a7725b6854c9c8b6c541c2e2a85ac2f92df94dd7c1

@@ -1,5 +1,7 @@
 ---
 # vars file for container-linux-config-transpiler
-clct_bin: ct-{{clct_ver}}-{{ansible_architecture}}-{{clct_platform}}
-clct_url: '{{clct_mirror}}/{{clct_ver}}/{{clct_bin}}'
-clct_checksum: '{{clct_checksums[clct_platform]}}'
+clct_platform: '{{ clct_arch | default(ansible_architecture) }}-{{ clct_os }}'
+
+clct_bin: ct-{{ clct_ver }}-{{ clct_platform }}{{ clct_dotexe | default("") }}
+clct_url: '{{ clct_mirror }}/{{ clct_ver }}/{{ clct_bin }}'
+clct_checksum: '{{ clct_checksums[clct_ver][clct_platform] }}'
